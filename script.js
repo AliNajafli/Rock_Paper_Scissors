@@ -2,9 +2,9 @@ var str=['Paper', 'Rock', 'Scissors'];
 var computerScore=0;
 var playerScore =0;
 function computer(){
-    var num=Math.floor(Math.round()*3);
-    var computer=str[num];
-    return computer;
+    var num=Math.floor(Math.random()*2);
+    var compScore=str[num];
+    return compScore;
 }
 function playRound(player, comp) {
     if (player == 'rock' && comp == 'Scissors') {
@@ -38,7 +38,8 @@ function playRound(player, comp) {
 function game() {
     for (var i = 0; i < 5; i++) {
         var player = prompt('Type: Rock, Paper, or Scissors')
-       
+        console.log(player);
+        
         var comp = computer();
         console.log(comp);
         playRound(player, comp);
